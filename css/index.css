@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: 0 !important;
-}
-
 * + * {
   margin-top: 1rem;
 }
@@ -23,10 +19,6 @@ body {
 html {
   font: 120%/1.15 sans-serif;
   background-color: #eee;
-}
-
-body {
-  color: #a1a1a1;
 }
 
 /* 
