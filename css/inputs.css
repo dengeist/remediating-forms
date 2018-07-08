@@ -7,7 +7,6 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  text-align: center;
   background-color: white;
   padding: 5px 10px;
   margin-top: 0.375rem;
@@ -26,6 +25,7 @@ input[type='radio'] {
 
 .btn {
   margin-top: 0.75rem;
+  text-align: center;
   transition: background-color 175ms linear, border-color 175ms linear,
     color 175ms ease;
 }
