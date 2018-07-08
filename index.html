@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/form.css">
   <link rel="stylesheet" href="./css/inputs.css">
-  <link rel="stylesheet" href="./css/custom-checkbox-radio.css">
+  <!-- <link rel="stylesheet" href="./css/custom-checkbox-radio.css"> -->
 
 </head>
 
@@ -21,42 +21,42 @@
     <p>This is your personal dream journal! Take notes on your dreams as you have them; we'll help you spot patterns.
     </p>
     <form class="js-dream-form">
-      <fieldset class="form-section">
-        <legend class="section-title">
+      <section class="form-section">
+        <header class="section-title">
           <h2>What do you remember?</h2>
-        </legend>
+        </header>
         <div class="form-group">
-          <label for="summary" id="dream-label">What happened?</label>
+          <span id="dream-label">What happened?</span>
           <input id="summary" name="summary" type="text">
         </div>
         <div class="form-group">
-          <label for="details" id="details-label">Any details?</label>
+          <span id="details-label">Any details?</span>
           <textarea name="details" id="details"></textarea>
         </div>
-      </fieldset>
-      <fieldset class="form-section">
-        <legend class="section-title">
+      </section>
+      <section class="form-section">
+        <header class="section-title">
           <h2>How do you feel about it?</h2>
-        </legend>
+        </header>
         <div class="form-group">
           <input type="radio" name="feeling" value="high" id="feeling-0" class="feeling em-custom">
-          <label for="feeling-0">Pretty good</label>
+          <span>Pretty good</span>
         </div>
         <div class="form-group">
           <input type="radio" name="feeling" value="med" id="feeling-1" class="feeling em-custom">
-          <label for="feeling-1">Meh</label>
+          <span>Meh</span>
         </div>
         <div class="form-group">
           <input type="radio" name="feeling" value="high" id="feeling-2" class="feeling em-custom">
-          <label for="feeling-2">Pretty bad</label>
+          <span>Pretty bad</span>
         </div>
-      </fieldset>
+      </section>
       <div class="btn-group btn-group--inline">
-        <button type="submit">Save</button>
-        <button type="reset">Reset</button>
+        <div class="btn" type="submit">Save</div>
+        <div class="btn" type="reset">Reset</div>
       </div>
 
-      <output name="feedback" id="feedback" class="feedback js-feedback" role="status" aria-live="polite"></output>
+      <div name="feedback" id="feedback" class="feedback js-feedback"></div>
     </form>
 
   </div>
