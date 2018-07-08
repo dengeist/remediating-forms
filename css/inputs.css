@@ -1,4 +1,4 @@
-button,
+.btn,
 input[type='text'],
 select,
 textarea {
@@ -7,6 +7,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-align: center;
   background-color: white;
   padding: 5px 10px;
   margin-top: 0.375rem;
@@ -23,7 +24,7 @@ input[type='radio'] {
   vertical-align: middle;
 }
 
-button {
+.btn {
   margin-top: 0.75rem;
   transition: background-color 175ms linear, border-color 175ms linear,
     color 175ms ease;
@@ -39,7 +40,7 @@ input[type='radio'] + label {
   vertical-align: middle;
 }
 
-button:focus,
+.btn:focus,
 input[type='checkbox']:focus,
 input[type='text']:focus,
 select:focus,
@@ -54,8 +55,8 @@ input[type='radio']:focus {
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #1f74bf;
 }
 
-button:hover,
-button:focus {
+.btn:hover,
+.btn:focus {
   background-color: black;
   border-color: black;
   color: white;
@@ -65,12 +66,12 @@ button:focus {
   .btn-group--inline {
     font-size: 0;
   }
-  .btn-group--inline > button {
+  .btn-group--inline > .btn {
     font-size: 1rem;
     display: inline-block;
     width: 48%;
   }
-  .btn-group--inline > button:first-child {
+  .btn-group--inline > .btn:first-child {
     margin-right: 4%;
   }
 }
