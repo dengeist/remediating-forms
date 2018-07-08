@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Record your dream</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/form.css">
+  <link rel="stylesheet" href="./css/inputs.css">
+  <link rel="stylesheet" href="./css/custom-checkbox-radio.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      Record your dream
+    </h1>
+    <p>This is your personal dream journal! Take notes on your dreams as you have them; we'll help you spot patterns.
+    </p>
+    <form class="js-dream-form">
+      <fieldset class="form-section">
+        <legend class="section-title">
+          <h2>What do you remember?</h2>
+        </legend>
+        <div class="form-group">
+          <label for="summary" id="dream-label">What happened?</label>
+          <input id="summary" name="summary" type="text">
+        </div>
+        <div class="form-group">
+          <label for="details" id="details-label">Any details?</label>
+          <textarea name="details" id="details"></textarea>
+        </div>
+      </fieldset>
+      <fieldset class="form-section">
+        <legend class="section-title">
+          <h2>How do you feel about it?</h2>
+        </legend>
+        <div class="form-group">
+          <input type="radio" name="feeling" value="high" id="feeling-0" class="feeling em-custom">
+          <label for="feeling-0">Pretty good</label>
+        </div>
+        <div class="form-group">
+          <input type="radio" name="feeling" value="med" id="feeling-1" class="feeling em-custom">
+          <label for="feeling-1">Meh</label>
+        </div>
+        <div class="form-group">
+          <input type="radio" name="feeling" value="high" id="feeling-2" class="feeling em-custom">
+          <label for="feeling-2">Pretty bad</label>
+        </div>
+      </fieldset>
+      <div class="btn-group btn-group--inline">
+        <button type="submit">Save</button>
+        <button type="reset">Reset</button>
+      </div>
+
+      <output name="feedback" id="feedback" class="feedback js-feedback" role="status" aria-live="polite"></output>
+    </form>
+
+  </div>
+  <script src="./js/form.js"></script>
+</body>
+
+</html>

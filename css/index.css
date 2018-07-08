@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* + * {
+  margin-top: 1rem;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font: 100%/1 sans-serif;
+  height: 100%;
+}
+
+html {
+  font: 120%/1.15 sans-serif;
+  background-color: #eee;
+}
+
+/* 
+* Utility classes
+*/
+
+/* Visually hidden yet accessible content */
+.visuallyhidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  visibility: hidden;
+  opacity: 0;
+}

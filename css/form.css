@@ -1,0 +1,47 @@
+form {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+.container {
+  max-width: 600px;
+  padding: 2rem 1rem;
+  margin: 5rem auto;
+}
+
+.form-section {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin-top: 1rem;
+}
+
+.section-title > h2,
+.section-title > h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.feedback {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.feedback:empty {
+  border: 0;
+  background-color: transparent;
+  height: 0;
+}
+
+.section-title + .form-group {
+  margin-top: 1.2rem;
+}

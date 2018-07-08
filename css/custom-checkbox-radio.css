@@ -1,0 +1,123 @@
+/**
+* Inspiration: https://codepen.io/mpeace/pen/BmEweP
+*/
+
+/** 
+ * Hide the browser input
+ * but leave it available to keyboard
+ */
+input[type='checkbox'].em-custom,
+input[type='radio'].em-custom {
+  border: 0;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/**
+ * 1. Set position relative so label will anchor
+ * its ::after pseudoelement
+ * 2. Add space between fake input and text that follows
+ */
+input[type='checkbox'].em-custom + label,
+input[type='radio'].em-custom + label {
+  display: inline-block;
+  position: relative; /* 1 */
+  padding: 0 0 0 1.4rem; /* 2 */
+}
+/* Draw the shapes for custom checkboxes and radios. */
+input[type='checkbox'].em-custom + label::before,
+input[type='radio'].em-custom + label::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  top: 0;
+  left: 0;
+  border: solid 1px grey;
+  background-color: #fff;
+}
+
+/* Round off radio shape */
+input[type='radio'].em-custom + label::before {
+  border-radius: 50%;
+}
+
+/* Disc shape when radio checked */
+input[type='radio'].em-custom:checked + label::before {
+  border-width: 0.3rem;
+  border-color: #1f74bf;
+}
+/** 
+ * Checkbox tick:
+ * 1. Position the tick.
+ * 2. Give it a rectangular shape.
+ * 3. Draw borders on only two sides to create check shape.
+ * 4. Rotate box to put check shape at an angle.
+ */
+input[type='checkbox'].em-custom:checked + label::after {
+  content: '';
+  position: absolute; /* 1 */
+  left: 5px; /* 1 */
+  top: -2px; /* 1 */
+  width: 9px; /* 2 */
+  height: 1rem; /* 2 */
+  border: solid #1f74bf; /* 2 */
+  border-width: 0 3px 3px 0; /* 3 */
+  transform: rotate(45deg); /* 4 */
+}
+
+/** 
+ * Outline when controls take focus.
+ * The CSS `outline` property won't respect custom
+ * round shapes, so we draw a box shadow.
+ */
+input[type='checkbox'].em-custom:focus + label::before,
+input[type='radio'].em-custom:focus + label::before {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #1f74bf;
+}
+
+input[type='checkbox'].em-custom:disabled + label,
+input[type='radio'].em-custom:disabled + label {
+  color: #999;
+}
+
+input[type='checkbox'].em-custom:disabled + label::before,
+input[type='radio'].em-custom:disabled + label::before {
+  border-color: #999;
+}
+input[type='checkbox'].em-custom:disabled + label::after,
+input[type='radio'].em-custom:disabled + label::after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1.3em;
+  top: -2px;
+  left: 0.5em;
+  border: solid 1px #999;
+  border-right: 0;
+  transform: rotate(45deg);
+}
+
+.hcm-true input[type='checkbox'].em-custom:focus + label::before,
+.hcm-true input[type='radio'].em-custom:focus + label::before {
+  box-shadow: none;
+  outline: solid 0.2em;
+  outline-offset: 0.2em;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  input[type='checkbox'].em-custom:focus + label::before,
+  input[type='radio'].em-custom:focus + label::before {
+    box-shadow: none;
+    outline: solid 0.2em;
+    outline-offset: 0.2em;
+  }
+}
